@@ -2,7 +2,7 @@
 real_time_face_detection_classify_smile_and_face_mosaic<br>
 [数据集下载]（https://github.com/hromi/SMILEsmileD）<br>
 人脸微笑分类数据库树状结构如下：<br>
------datasets----- <br>
+-----数据集----- <br>
 >SMILEs<br>
 >>\negatives\negatives\img.jpg......<br>
 >>\positives\positives\img.jpg......<br>
