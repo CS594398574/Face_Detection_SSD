@@ -2,7 +2,7 @@
 real_time_face_detection_classify_smile_and_face_mosaic<br>
 人脸微笑分类数据库树状结构如下：<br>
 -----datasets----- <br>
->...\SMILEs<br>
+>SMILEs<br>
 >>\negatives\negatives\img.jpg......<br>
 >>\positives\positives\img.jpg......<br>
 
