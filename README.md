@@ -21,7 +21,7 @@ real_time_face_detection_classify_smile_and_face_mosaic<br>
 
 微笑分类训练命令：<br>
 ```python
-*python train_ResNet.py -d 数据集路径 -m 模型保存路径*<br>
+python train_ResNet.py -d 数据集路径 -m 模型保存路径   
 ```
 例如：python train_ResNet.py -d E:\\ImageDataSet\\SMILEs\\ -m E:\\ImageDataSet\\SMILEs\\resnet.hdf5 <br>
 
