@@ -36,5 +36,5 @@ python SSD_detection_smile_masic.py -p SSD的deploy.prototxt文件路径 -m SSD�
 ```
 例如<br>
 ```java
-python SSD_detection_smile_masic.py -p E:\ImageDataSet\deep-learning-face-detection\deep-learning-face-detection\deploy.prototxt.txt -m E:\ImageDataSet\deep-learning-face-detection\deep-learning-face-detection\res10_300x300_ssd_iter_140000.caffemodel -cm E:\CVDL\Smiles\lenet.hdf5
+python SSD_detection_smile_masic.py -p E:\ImageDataSet\deep-learning-face-detection\deep-learning-face-detection\deploy.prototxt.txt -m E:\ImageDataSet\deep-learning-face-detection\deep-learning-face-detection\res10_300x300_ssd_iter_140000.caffemodel -cm E:\ImageDataSet\SMILEs\resnet.hdf5
 ```
