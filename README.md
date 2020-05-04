@@ -6,7 +6,8 @@ real_time_face_detection_classify_smile_and_face_mosaic<br>
 >SMILEs<br>
 >>\negatives\negatives\img.jpg......<br>
 >>\positives\positives\img.jpg......<br>
-<br>文件路径结构如下：<br>
+
+文件路径结构如下：<br>
 >face_detection_SSD<br>
 >>|---train_ResNet.py<br>
 >>|---SSD_detection_smile_masic.py<br>
