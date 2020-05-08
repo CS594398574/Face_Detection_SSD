@@ -7,35 +7,28 @@ import cv2
 from Masic import anonymize_face_pixelate,anoymize_face_simple
 from keras.models import load_model
 from keras.preprocessing.image import img_to_array
-# ap = argparse.ArgumentParser()
-# ap.add_argument("-p","--prototxt",required=True,
-#                 help="Path to Caffe 'deploy' prototxt file")
-# ap.add_argument("-m","--model",required=True,
-#                 help="Path to Caffe pre-trained model")
-# ap.add_argument("-c","--confidence",type=float,default=0.5,
-#                 help="minimum probaility to filter weak detections")
-# ap.add_argument("-cm","--cmodel",required=True,
-#                 help="Path to keras Classifier model for emotion")
-# # ap.add_argument("-v","--video",required=False,
-# #                 help= "path to the (optional) video file")
-# args = vars(ap.parse_args())
+ap = argparse.ArgumentParser()
+ap.add_argument("-p","--prototxt",required=True,
+                help="Path to Caffe 'deploy' prototxt file")
+ap.add_argument("-m","--model",required=True,
+                help="Path to Caffe pre-trained model")
+ap.add_argument("-c","--confidence",type=float,default=0.5,
+                help="minimum probaility to filter weak detections")
+ap.add_argument("-cm","--cmodel",required=True,
+                help="Path to keras Classifier model for emotion")
+# ap.add_argument("-v","--video",required=False,
+#                 help= "path to the (optional) video file")
+args = vars(ap.parse_args())
 
-args ={ }
-args["prototxt"] = "E:\\ImageDataSet\\deep-learning-face-detection\\deep-learning-face-detection\\deploy.prototxt.txt "
-args["model"] = "E:\\ImageDataSet\\deep-learning-face-detection\\deep-learning-face-detection\\res10_300x300_ssd_iter_140000.caffemodel"
-args["confidence"] = 0.5
-args["cmodel"] =  "E:\\ImageDataSet\\SMILEs\\resnet.hdf5"
-
-
+# args ={ }
+# args["prototxt"] = "E:\\ImageDataSet\\deep-learning-face-detection\\deep-learning-face-detection\\deploy.prototxt.txt "
+# args["model"] = "E:\\ImageDataSet\\deep-learning-face-detection\\deep-learning-face-detection\\res10_300x300_ssd_iter_140000.caffemodel"
+# args["confidence"] = 0.5
+# args["cmodel"] =  "E:\\ImageDataSet\\SMILEs\\resnet.hdf5"
 
 print("[INFO] loading model....")
 net = cv2.dnn.readNetFromCaffe(args["prototxt"],args["model"])
-
-# if not args.get("video",False):
-#     #videostream = cv2.VideoCapture(0)
 videostream = VideoStream(src=0).start()
-# else:
-#     videostream = VideoStream(src=args["video"])
 time.sleep(1.0)  #摄像头预热
 cmodel = load_model(args["cmodel"])
 #fourcc = cv2.VideoWriter_fourcc(*'XVID')
@@ -70,9 +63,7 @@ while True:
         roi = roi.astype("float") / 255.0
         roi = img_to_array(roi)
         roi = np.expand_dims(roi, axis=0)
-
         (notSmiling, smiling) = cmodel.predict(roi)[0]
-        #label = "Smiling" if smiling > notSmiling else "Not Smiling"
         label = "Smiling" if smiling > 0.5 else "Not Smiling"
         text ="{:.2f}%".format(confidence*100)
         y = startY -10 if startY -10 >10 else startY +10
