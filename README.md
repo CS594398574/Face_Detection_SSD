@@ -7,20 +7,20 @@ real_time_face_detection_classify_smile_and_face_mosaic<br>
 
 人脸微笑分类数据库树状结构如下：<br>
 -----数据集----- <br>
->SMILEs<br>     微笑数据集
->>\negatives\negatives\img.jpg......<br>     >>负样本数据集图片存储
->>\positives\positives\img.jpg......<br>     >>正样本数据集图片存储
+>SMILEs<br>     微笑数据集<br>
+>>\negatives\negatives\img.jpg......<br>     >>负样本数据集图片存储<br>
+>>\positives\positives\img.jpg......<br>     >>正样本数据集图片存储<br>
 
 文件路径结构如下：<br>
->face_detection_SSD<br>         基于SSD人脸检测源码
->>|---train_ResNet.py<br>       残差网络，利用该网络训练残差模型来对人脸图片进行识别。
->>|---SSD_detection_smile_masic.py<br>    基于SSD人脸微笑检测具备马赛克能力，适用于数据为视频格式。
->>|---SSD_detection_smile_masic_image.py<br> 基于SSD人脸微笑检测具备马赛克能力，适用于数据为图片格式。
->>|---Masic.py<br>   马赛克源码
->>|---nn<br>      网络模型
+>face_detection_SSD<br>         基于SSD人脸检测源码<br>
+>>|---train_ResNet.py<br>       残差网络，利用该网络训练残差模型来对人脸图片进行识别。<br>
+>>|---SSD_detection_smile_masic.py<br>    基于SSD人脸微笑检测具备马赛克能力，适用于数据为视频格式。<br>
+>>|---SSD_detection_smile_masic_image.py<br> 基于SSD人脸微笑检测具备马赛克能力，适用于数据为图片格式。<br>
+>>|---Masic.py<br>   马赛克源码<br>
+>>|---nn<br>      网络模型<br>
 >>>|---__init__.py<br>
->>>|---resnet.py<br>   残差网络模型
->>>|---lenet.py<br>    lenet网络模型
+>>>|---resnet.py<br>   残差网络模型<br>
+>>>|---lenet.py<br>    lenet网络模型<br>
 
 微笑分类训练命令：<br>
 ```java
