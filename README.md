@@ -8,8 +8,8 @@ real_time_face_detection_classify_smile_and_face_mosaic<br>
 人脸微笑分类数据库树状结构如下：<br>
 -----数据集----- <br>
 >SMILEs<br>     微笑数据集
->>\negatives\negatives\img.jpg......<br>     负样本数据集图片存储
->>\positives\positives\img.jpg......<br>     正样本数据集图片存储
+>>\negatives\negatives\img.jpg......<br>     >>负样本数据集图片存储
+>>\positives\positives\img.jpg......<br>     >>正样本数据集图片存储
 
 文件路径结构如下：<br>
 >face_detection_SSD<br>         基于SSD人脸检测源码
