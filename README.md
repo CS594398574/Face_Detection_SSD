@@ -1,6 +1,8 @@
 # Face_Detection_SSD<br>
 real_time_face_detection_classify_smile_and_face_mosaic<br>
-[数据集下载]（https://github.com/hromi/SMILEsmileD）<br>
+[数据集下载]链接：https://pan.baidu.com/s/1ZveCAMqAgS6r2CqShrXppA 
+提取码：m2l5
+<br>
 
 环境：win10 + keras2.0 + tensorflow(1.9)
 
